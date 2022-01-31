@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8" />
+    <title>Proyecto Alan</title>
+    <link href="../css/estilos.css" rel="stylesheet" type="text/css">
+    <link  rel="icon"   href="../imagenes/favicon-96x96.png" type="img/png"/>
+    </head>
+        <body>
+            <br>
+                <div id="cabecera">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Tim Berners-Lee</a>
+                        </li>
+                        <li>
+                            <a href="../html/portafolio.html">Portafolio</a>
+                        </li>
+                        <li>
+                            <a href="../html/tabla_precios.html">Tabla de Precios</a>
+                        </li>
+                        <li>
+                            <a href="../html/contacto.html">Contactame</a>
+                        </li>
+                    </ul>
+                    <img src="../imagenes/imagen-menu.png" usemap="#image-map">
+
+                    <map name="image-map">
+                        <area href="../index.html" coords="16,45,108,130" shape="rect">
+                        <area href="../html/portafolio.html" coords="173,91,46" shape="circle">
+                        <area href="../html/tabla_precios.html" coords="288,44,233,134,343,135" shape="poly">
+                        <area href="../html/contacto.html" coords="353,34,439,138" shape="rect">
+                    </map>
+                </div>
+                <div id="main-content" style="color: rgb(0, 0, 0);">
+                    <h1>
+                        Contactame
+                    </h1>
+                    <h2>
+                        Formulario de Contacto
+                    </h2>
+                    <form method="post" action="../php/contactar.php" name="FormularioContacto"
+                    enctype="multipart/form-data">
+                        <fieldset>
+                            <legend>Datos Personales</legend>
+                                <p>
+                                    Nombre: 
+                                    <input type="text" name="nombre" placeholder="Introducción tu nombre..." required pattern="[A-Za-z] {3-35}" size="40" maxlength="35">...*
+                                </p>
+                                <p>
+                                    Apellidos: 
+                                    <input type="text" name="apellido" placeholder="Introducción tu apellido..." required pattern="[A-Za-z] {5-45}" size="40" maxlength="35">...*
+                                </p>
+                                <p>
+                                    Email: 
+                                    <input type="email" name="email" maxlength="25" size="27"  required pattern="[A-Za-z] [@] {5-27}" title="Falta la @ en tu dirección">...*
+                                </p>
+                                <p>
+                                    Selecciona una fecha:  
+                                    <input type="date" name="Fecha" min="2000-01-01" max="2023-01-01" />
+                                </p>
+                                <p>
+                                    Edad: 
+                                    <input type="number" name="Edad" min="10" max="100" step="1" required pattern="[]" title="El valor debe ser superior o igual a 10 y igual o menor que 100">
+                                </p>
+                                <p>
+                                    Sexo:
+                                    <label> <input type="radio" id="SexoHombre" name="sexo"/> Hombre </label>
+                                    <label> <input type="radio" id="SexoMujer" name="sexo"/> Mujer </label>
+                                </p>
+                                <p>
+                                    <label for="Pais">País</label>
+                                    <select id="Pais" name="Pais">
+                                        <option value="" selected="selected">- selecciona -</option>
+                                        <option value="España">España</option>
+                                        <option value="Francia">Francia</option>
+                                        <option value="Portugal">Portugal</option>
+                                        <option value="Italia">Italia</option>
+                                    </select>
+                                </p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>
+                                Otros datos
+                            </legend>
+                            <p>
+                                Descripción:
+                                <textarea name="Mensaje" cols="40" rows="10" spellcheck="true" placeholder="Introduce tu mensaje..."></textarea>
+                            </p>
+                                Adjunta una foto... <input type="file" name="archivoAdjunto" accept=".pdf, .jpg, .png" multiple/>
+                        </fieldset>
+                        <p>
+                            <label><input type="checkbox" name="AceptaCondiciones"/> He leído las condiciones ...</label>
+                        </p>
+                        <p>
+                            <input type="reset" value="Limpiar formulario"/>
+                            <input type="submit" value="Enviar formulario"/>
+                        </p>
+                    </form> 
+                </div>
+                <div id="side-content" style="color: rgb(0, 0, 0);">
+                    <h1>
+                        Centro de referencia
+                    </h1>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.779733641413!2d-16.28545688492136!3d28.45605558248781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41cceee5a8035f%3A0xab9f2a74d9e68b51!2sCIFP%20C%C3%A9sar%20Manrique!5e0!3m2!1ses!2ses!4v1643296528306!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div id="footer" style="color: rgb(0, 0, 0);">
+                    <p>
+                        © 2040  <a href="../index.html" style="color: rgb(0, 0, 0);"> www.MiSitio.com </a>
+                    </p>
+                </div>
+        </body>
+</html>
